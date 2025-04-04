@@ -27,7 +27,7 @@ export default function Home() {
         "Contemporary abstract expressions exploring the boundaries between chaos and order",
     },
     {
-      image: "/placeholder.svg?height=1080&width=1920",
+      image: "/banner_expo.png",
       title: "Fragments of Reality",
       description: "A solo exhibition opening June 15, 2025",
     },
