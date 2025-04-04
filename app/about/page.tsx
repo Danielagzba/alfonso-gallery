@@ -17,7 +17,7 @@ export default function AboutPage() {
 
             <div className="prose max-w-none">
               <p className="text-lg mb-4">
-                Sarah Johnson is a contemporary abstract artist based in New
+                Alfonso Alfaro is a contemporary abstract artist based in New
                 York City. With over 15 years of experience, her work explores
                 the intersection of color, form, and emotion through various
                 mediums, primarily focusing on oil and acrylic painting.
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg mb-6">
                 <Image
                   src="/placeholder.svg?height=800&width=600"
-                  alt="Sarah Johnson"
+                  alt="Alfonso Alfaro"
                   fill
                   className="object-cover"
                 />
