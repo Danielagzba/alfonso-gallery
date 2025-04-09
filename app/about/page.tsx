@@ -13,7 +13,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 order-2 lg:order-1">
-            <h2 className="text-3xl font-bold mb-6">Alfonso</h2>
+            <h2 className="text-3xl font-bold mb-6">Alfonso Alfaro</h2>
 
             <div className="prose max-w-none">
               <p className="text-lg mb-4">

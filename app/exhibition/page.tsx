@@ -34,7 +34,7 @@ export default function ExhibitionPage() {
             <p className="text-lg text-muted-foreground mb-6">
               "Fragments of Reality" is a comprehensive solo exhibition
               featuring over 25 new works created over the past two years. This
-              collection represents a significant evolution in Alfosno Alfaro's
+              collection represents a significant evolution in Alfonso Alfaro's
               artistic practice, exploring themes of memory, perception, and the
               fragmented nature of human experience.
             </p>

@@ -1,149 +1,81 @@
 "use client";
-
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Calendar,
-  MapPin,
-  Clock,
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import FeaturedWorks from "@/components/featured-works";
 import NewsletterSignup from "@/components/newsletter-signup";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const carouselItems = [
     {
-      image: "/placeholder.svg?height=1080&width=1920",
-      title: "Alfonso Alfaro",
-      description:
-        "Contemporary abstract expressions exploring the boundaries between chaos and order",
-    },
-    {
-      image: "/bannerexpo.jpg",
+      image: "/obra.jpeg",
       title: "Manual para no repetirlo",
-      description: "Crónica visual de mi colapso estilizado",
-    },
-    {
-      image: "/placeholder.svg?height=1080&width=1920",
-      title: "Explore the Collection",
-      description:
-        "Discover a diverse portfolio of abstract and geometric works",
+      subtitle: "Exposición Individual",
+      date: "22 de mayo - 09 de junio, 2025",
+      location: "Galería Espacio Libre",
+      description: "Autobiografía parcial de mi colapso y redención",
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPrevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + carouselItems.length) % carouselItems.length
-    );
-  };
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-  };
-
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Hero Section Carousel */}
-      <section className="relative h-[70vh] w-full overflow-hidden">
+      {/* Hero Section Carousel - Modern Creative Version */}
+      <section className="relative h-[85vh] w-full overflow-hidden bg-black">
         {/* Carousel implementation */}
-        {(() => {
-          return (
-            <>
-              {carouselItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide
-                      ? "opacity-100"
-                      : "opacity-0 pointer-events-none"
-                  }`}
-                >
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    fill
-                    priority
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/40" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                      {item.title}
-                    </h1>
-                    <p className="text-xl md:text-2xl text-white/90 max-w-2xl">
-                      {item.description}
-                    </p>
-                    <div className="mt-8">
-                      <Button
-                        asChild
-                        size="lg"
-                        className="bg-white text-black hover:bg-white/90"
-                      >
-                        <Link href="/gallery">Explore Gallery</Link>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src={carouselItems[0].image || "/placeholder.svg"}
+              alt={carouselItems[0].title}
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          </div>
 
-              {/* Carousel Controls */}
-              <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
+          <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-16">
+            <div className="max-w-xl">
+              <div className="h-1 w-20 bg-primary mb-6" />
+              <span className="inline-block text-white/80 text-xl mb-2 font-medium">
+                Próxima Exposición
+              </span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+                {carouselItems[0].title}
+              </h1>
+              <div className="flex items-center gap-2 text-primary mb-4">
+                <Calendar className="h-5 w-5" />
+                <span className="text-white/90">{carouselItems[0].date}</span>
+              </div>
+              <div className="flex items-center gap-2 text-primary mb-6">
+                <MapPin className="h-5 w-5" />
+                <span className="text-white/90">
+                  {carouselItems[0].location}
+                </span>
+              </div>
+              <p className="text-xl md:text-2xl text-white/80 max-w-md mb-8">
+                {carouselItems[0].description}
+              </p>
+              <div className="flex gap-4">
                 <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-full bg-black/30 border-none text-white hover:bg-black/50 pointer-events-auto"
-                  onClick={goToPrevSlide}
+                  asChild
+                  size="lg"
+                  className="bg-primary text-white hover:bg-primary/90 rounded-none px-8"
                 >
-                  <ChevronLeft className="h-6 w-6" />
-                  <span className="sr-only">Previous slide</span>
+                  <Link href="/exhibition">Detalles de la Exposición</Link>
                 </Button>
                 <Button
+                  asChild
+                  size="lg"
                   variant="outline"
-                  size="icon"
-                  className="rounded-full bg-black/30 border-none text-white hover:bg-black/50 pointer-events-auto"
-                  onClick={goToNextSlide}
-                >
-                  <ChevronRight className="h-6 w-6" />
-                  <span className="sr-only">Next slide</span>
-                </Button>
+                  className="border-white/30 text-white hover:bg-white/10 rounded-none px-8"
+                ></Button>
               </div>
-
-              {/* Carousel Indicators */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                {carouselItems.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                      index === currentSlide ? "bg-white" : "bg-white/50"
-                    }`}
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </>
-          );
-        })()}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Upcoming Exhibition */}
@@ -152,45 +84,47 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Próxima exposición
+                Próxima Exposición
               </h2>
               <h3 className="text-2xl font-medium mb-4">
-                "Fragments of Reality"
+                "Manual para no repetirlo"
               </h3>
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-3">
                   <Calendar className="h-5 w-5 text-primary" />
-                  <span>Mayo 22 - Junio 7, 2025</span>
+                  <span>22 de mayo - 09 de junio, 2025</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Modern Art Gallery, 123 Art Street, New York</span>
+                  <span>Galería Espacio Libre</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>Opening Reception: June 15, 6:00 PM - 9:00 PM</span>
+                  <span>Inauguración: 22 de mayo, 6:00 PM - 10:00 PM</span>
                 </div>
               </div>
               <p className="text-white/80 mb-6">
-                Join us for the opening reception of "Fragments of Reality," a
-                solo exhibition featuring new works that explore the
-                intersection of memory, perception, and abstract expression.
+                Puertas & Ventanas es una exposición autobiográfica que reúne
+                obras creadas entre 2023 y 2025. A través de una narrativa
+                cronológica, refleja cómo he afrontado mi diagnóstico de VIH y
+                los cambios que han definido mi vida en los últimos años.
               </p>
               <Button
                 asChild
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black"
+                className="border-white text-black hover:bg-white hover:text-black"
               >
                 <Link href="/exhibition">
-                  Exhibition Details <ArrowRight className="ml-2 h-4 w-4" />
+                  Detalles de la Exposición{" "}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
             <div className="md:w-1/2">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=800&width=1200"
-                  alt="Exhibition preview"
+                  src="/flyer.png"
+                  alt="Vista previa de la exposición"
                   fill
                   className="object-cover"
                 />
@@ -206,20 +140,20 @@ export default function Home() {
       {/* Artist Statement */}
       <section className="py-16 px-4 md:px-6 bg-muted/30">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Artist Statement</h2>
+          <h2 className="text-3xl font-bold mb-6">Declaración del Artista</h2>
           <p className="text-lg text-muted-foreground mb-4">
-            "My work explores the tension between structured composition and
-            spontaneous expression. I am fascinated by the ways in which color,
-            form, and texture can evoke emotional responses and create visual
-            narratives that transcend language."
+            Este proyecto traza mi camino como artista y como persona. Explora
+            de dónde vengo, los desafíos que he enfrentado y hacia dónde me
+            dirijo. Se centra principalmente en los últimos cinco años, un
+            periodo de transformación, introspección y crecimiento.
           </p>
           <p className="text-lg text-muted-foreground mb-6">
-            "Through my paintings, I invite viewers to engage with their own
-            perceptions and interpretations, finding personal meaning within the
-            abstract landscapes I create."
+            Cada capítulo refleja una parte de mi historia: mi pasado, mis
+            luchas, mis descubrimientos y la manera en que he usado el arte para
+            expresarme, sanar y conectar.
           </p>
           <Button asChild variant="outline">
-            <Link href="/about">About the Artist</Link>
+            <Link href="/about">Sobre el Artista</Link>
           </Button>
         </div>
       </section>

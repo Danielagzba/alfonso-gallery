@@ -23,16 +23,16 @@ export default function NewsletterSignup() {
     <section className="py-16 px-4 md:px-6 bg-primary/5">
       <div className="max-w-3xl mx-auto text-center">
         <Mail className="h-12 w-12 mx-auto mb-4 text-primary" />
-        <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+        <h2 className="text-3xl font-bold mb-4">Mantente Informado</h2>
         <p className="text-lg text-muted-foreground mb-8">
-          Subscribe to receive updates about new works, upcoming exhibitions, and special events.
+          Suscríbete para recibir actualizaciones sobre nuevas obras, próximas exposiciones y eventos especiales.
         </p>
 
         {subscribed ? (
           <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 max-w-md mx-auto">
-            <h3 className="text-xl font-medium mb-2">Thank You for Subscribing!</h3>
+            <h3 className="text-xl font-medium mb-2">¡Gracias por Suscribirte!</h3>
             <p className="text-muted-foreground">
-              You'll now receive updates about new works, exhibitions, and events.
+              Ahora recibirás actualizaciones sobre nuevas obras, exposiciones y eventos.
             </p>
           </div>
         ) : (
@@ -44,17 +44,16 @@ export default function NewsletterSignup() {
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Ingresa tu correo electrónico"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
-            <Button type="submit">Subscribe</Button>
+            <Button type="submit">Suscribirse</Button>
           </form>
         )}
       </div>
     </section>
   )
 }
-
