@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <main className="py-12 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">About the Artist</h1>
+        <h1 className="text-4xl font-bold mb-8">Sobre el Artista</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 order-2 lg:order-1">
@@ -17,118 +17,58 @@ export default function AboutPage() {
 
             <div className="prose max-w-none">
               <p className="text-lg mb-4">
-                Alfonso Alfaro is a contemporary abstract artist based in New
-                York City. With over 15 years of experience, her work explores
-                the intersection of color, form, and emotion through various
-                mediums, primarily focusing on oil and acrylic painting.
+                Alfonso Alfaro es un artista nacido en la Ciudad de México en
+                1990, su vida tomó, por un tiempo, un rumbo aparentemente ajeno
+                al arte. Se adentró en el mundo de las finanzas, una carrera
+                segura, pero que nunca terminó de alinearse con lo que realmente
+                lo movía. En retrospectiva, el arte siempre estuvo ahí,
+                esperando. Su camino no comenzó con la pintura, sino con el
+                cine. Fue el cine el que le enseñó a expresar emociones, a
+                contar historias, a construir un lenguaje visual. Hoy, cada una
+                de sus pinturas forma parte de algo más grande, como una escena
+                dentro de una película: una invitación a presenciar un momento
+                de transformación.
               </p>
 
               <p className="text-lg mb-4">
-                Johnson's artistic journey began at the Rhode Island School of
-                Design, where she earned her BFA in Painting. She later
-                completed her MFA at the School of Visual Arts in New York. Her
-                work has been exhibited in galleries across the United States
-                and Europe, with pieces in several private and public
-                collections.
+                El punto de quiebre llegó en 2018, cuando fue diagnosticado con
+                VIH. En ese momento, todo se rompió, pero al mismo tiempo, todo
+                se volvió más claro. Tuvo que enfrentar sus miedos y su
+                vergüenza, dejar de huir de su propia verdad. El arte se
+                convirtió en su forma de reconstruirse, cada lienzo reflejando
+                su viaje de la oscuridad hacia la luz. Su próxima exposición,
+                Manual para no repetirlo, es una invitación a mirar esos
+                momentos a través de sus ojos, a sentir lo que él ha sentido y a
+                reflexionar sobre temas universales como la identidad, la
+                resiliencia y la vulnerabilidad.
               </p>
 
               <p className="text-lg mb-4">
-                Her artistic practice is characterized by a deep exploration of
-                the tension between structured composition and spontaneous
-                expression. Johnson is particularly interested in how color
-                relationships and textural elements can evoke emotional
-                responses and create visual narratives that transcend language.
+                Cree que el arte debe ser honesto. No se trata de perfección ni
+                de hacer algo “bonito”, sino de conectar. En un mundo donde el
+                pensamiento crítico y la educación visual suelen descuidarse,
+                busca que su obra provoque, que incomode. Pero también recurre
+                al humor, a la narrativa visual y a la intertextualidad para
+                hacer su trabajo más accesible.
               </p>
 
               <p className="text-lg mb-4">
-                "I see my paintings as visual poems—each one an attempt to
-                capture something ineffable about human experience," Johnson
-                explains. "I'm fascinated by the ways in which abstract forms
-                can communicate complex emotions and ideas more directly than
-                representational imagery."
-              </p>
-
-              <p className="text-lg mb-4">
-                In recent years, Johnson's work has evolved to incorporate more
-                mixed media elements, including collage and digital techniques.
-                This expansion reflects her ongoing interest in the
-                fragmentation and reconstruction of visual experience—a theme
-                that resonates throughout her body of work.
+                Su intención es abrir un diálogo, no solo sobre su experiencia
+                personal, sino sobre lo que significa vivir, luchar y,
+                eventualmente, sanar. El arte es su manera de decir la verdad
+                —su verdad—, y si logra conectar con alguien a nivel emocional o
+                intelectual, entonces sentirá que ha cumplido con su propósito.
               </p>
             </div>
 
             <Separator className="my-8" />
-
-            <h2 className="text-2xl font-bold mb-6">Education</h2>
-            <ul className="space-y-4 mb-8">
-              <li>
-                <div className="font-medium">MFA in Fine Arts</div>
-                <div className="text-muted-foreground">
-                  School of Visual Arts, New York, NY
-                </div>
-                <div className="text-sm text-muted-foreground">2010</div>
-              </li>
-              <li>
-                <div className="font-medium">BFA in Painting</div>
-                <div className="text-muted-foreground">
-                  Rhode Island School of Design, Providence, RI
-                </div>
-                <div className="text-sm text-muted-foreground">2007</div>
-              </li>
-            </ul>
-
-            <h2 className="text-2xl font-bold mb-6">Selected Exhibitions</h2>
-            <ul className="space-y-4 mb-8">
-              <li>
-                <div className="font-medium">
-                  "Chromatic Dialogues" (Solo Exhibition)
-                </div>
-                <div className="text-muted-foreground">
-                  Modern Art Gallery, New York, NY
-                </div>
-                <div className="text-sm text-muted-foreground">2023</div>
-              </li>
-              <li>
-                <div className="font-medium">
-                  "Abstractions in Context" (Group Exhibition)
-                </div>
-                <div className="text-muted-foreground">
-                  Contemporary Arts Center, Chicago, IL
-                </div>
-                <div className="text-sm text-muted-foreground">2022</div>
-              </li>
-              <li>
-                <div className="font-medium">
-                  "New Perspectives" (Group Exhibition)
-                </div>
-                <div className="text-muted-foreground">
-                  Gallery 456, London, UK
-                </div>
-                <div className="text-sm text-muted-foreground">2021</div>
-              </li>
-              <li>
-                <div className="font-medium">
-                  "Structural Harmonies" (Solo Exhibition)
-                </div>
-                <div className="text-muted-foreground">
-                  Axis Contemporary Art, San Francisco, CA
-                </div>
-                <div className="text-sm text-muted-foreground">2020</div>
-              </li>
-            </ul>
-
-            <Button asChild>
-              <Link href="/contact">
-                Contact the Artist <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
 
           <div className="order-1 lg:order-2">
             <div className="sticky top-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg mb-6">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
+                  src="/alfonso.jpg"
                   alt="Alfonso Alfaro"
                   fill
                   className="object-cover"
@@ -136,17 +76,21 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-muted/20 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Artist Statement</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Declaración de la Artista
+                </h3>
                 <p className="text-muted-foreground italic mb-4">
-                  "My work explores the tension between structured composition
-                  and spontaneous expression. I am fascinated by the ways in
-                  which color, form, and texture can evoke emotional responses
-                  and create visual narratives that transcend language."
+                  Mi trabajo explora la tensión entre la composición
+                  estructurada y la expresión espontánea. Me fascinan las formas
+                  en que el color, la forma y la textura pueden evocar
+                  respuestas emocionales y crear narrativas visuales que
+                  trascienden el lenguaje.
                 </p>
                 <p className="text-muted-foreground italic">
-                  "Through my paintings, I invite viewers to engage with their
-                  own perceptions and interpretations, finding personal meaning
-                  within the abstract landscapes I create."
+                  A través de mis pinturas, invito a los espectadores a
+                  involucrarse con sus propias percepciones e interpretaciones,
+                  encontrando un significado personal dentro de los paisajes
+                  abstractos que creo.
                 </p>
               </div>
             </div>
