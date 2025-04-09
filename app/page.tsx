@@ -38,18 +38,18 @@ export default function Home() {
 
           <div className="absolute inset-0 flex flex-col justify-center p-4 md:p-16">
             <div className="max-w-xl">
-              <div className="h-1 w-20 bg-primary mb-6" />
+              <div className="h-1 w-20 bg-white/90 mb-6" />
               <span className="inline-block text-white/80 text-xl mb-2 font-medium">
                 Próxima Exposición
               </span>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
                 {carouselItems[0].title}
               </h1>
-              <div className="flex items-center gap-2 text-primary mb-4">
+              <div className="flex items-center gap-2 text-white/90 mb-4">
                 <Calendar className="h-5 w-5" />
                 <span className="text-white/90">{carouselItems[0].date}</span>
               </div>
-              <div className="flex items-center gap-2 text-primary mb-6">
+              <div className="flex items-center gap-2 text-white/90 mb-6">
                 <MapPin className="h-5 w-5" />
                 <span className="text-white/90">
                   {carouselItems[0].location}
@@ -91,15 +91,15 @@ export default function Home() {
               </h3>
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-3">
-                  <Calendar className="h-5 w-5 text-primary" />
+                  <Calendar className="h-5 w-5 text-white/90" />
                   <span>22 de mayo - 09 de junio, 2025</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  <MapPin className="h-5 w-5 text-white/90" />
                   <span>Galería Espacio Libre</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <Clock className="h-5 w-5 text-white/90" />
                   <span>Inauguración: 22 de mayo, 6:00 PM - 10:00 PM</span>
                 </div>
               </div>
