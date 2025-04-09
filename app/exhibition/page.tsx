@@ -87,7 +87,7 @@ export default function ExhibitionPage() {
                 </div>
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="h-5 w-5 text-primary" />
-                  <span>12:00 PM - 3:30 PM</span>
+                  <span>12:00 PM - 1:00 PM</span>
                 </div>
                 <p className="text-muted-foreground mb-4">
                   Alfonso Alfaro hablará sobre su proceso creativo, sus
