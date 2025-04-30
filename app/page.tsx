@@ -104,10 +104,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-white/80 mb-6">
-                Puertas & Ventanas es una exposición autobiográfica que reúne
-                obras creadas entre 2023 y 2025. A través de una narrativa
-                cronológica, refleja cómo he afrontado mi diagnóstico de VIH y
-                los cambios que han definido mi vida en los últimos años.
+                En Manual para no repetirlo, Alfonso Alfaro narra en primera
+                persona su historia de colapso y transformación tras un
+                diagnóstico de VIH. A través de pintura, escultura y cine,
+                construye un relato visceral dividido en tres capítulos: Caos,
+                Soledad y Luz.
               </p>
               <Button
                 asChild

@@ -32,26 +32,33 @@ export default function ExhibitionPage() {
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold mb-6">Sobre la exposición</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Puertas & Ventanas es una exposición autobiográfica que reúne
-              obras creadas entre 2023 y 2025. A través de una narrativa
-              cronológica, refleja cómo he afrontado mi diagnóstico de VIH y los
-              cambios que han definido mi vida en los últimos años. La
-              exposición se divide en tres capítulos: Oscuridad, Sombra y Luz,
-              cada uno representando una etapa emocional distinta dentro de este
-              proceso.
+              Esta exposición refleja cómo he afrontado mi diagnóstico de VIH y
+              los cambios que han marcado mi vida en los últimos años. Es un
+              proyecto multidisciplinario que incluye pintura, una escultura y
+              un cortometraje; distintos lenguajes que dialogan entre sí para
+              contar una misma historia. A través de escenas hedonistas, de
+              adicción, aislamiento e introspección, retrato momentos que muchas
+              veces preferimos no mostrar. Lo hago con la intención de invitar
+              al espectador a presenciar esos estados con empatía y sin pena,
+              pero también con humor. Quiero que pueda reír conmigo de lo
+              absurdo que pueden llegar a ser los momentos más duros de la vida.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Al usarme como protagonista y figura central en cada obra, la
-              exposición adquiere una estructura de narrativa lineal. Esta
-              elección me permite abrirme sin máscaras (confesar), invitar al
-              espectador a entrar en mi mundo y presenciar momentos de absoluta
-              vulnerabilidad.
+              El recorrido se divide en tres capítulos: Caos, Soledad y Luz.
+              Algunas imágenes nacieron desde la confusión total; otras, desde
+              la lucidez. Pero todas contienen algo verdadero. Las obras están
+              conectadas entre sí para contar una historia con pocas palabras,
+              pero con mucha carga emocional.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Quiero demostrar que la especificidad es lo que vuelve una
-              historia universal: al compartir mi experiencia, busco evocar
-              emociones y vivencias que resuenen con quienes han lidiado con
-              enfermedad, adicción o crisis de identidad.
+              Este “manual” está hecho para no olvidar mi pasado turbulento, y
+              muestra lo que me ha servido a mí para seguir adelante y, con
+              suerte, no caer de nuevo. También es una invitación a que el
+              espectador se reconozca en lo que ve, y quizás reflexione sobre
+              sus propios ciclos mientras aprende algo sobre la realidad de
+              vivir con VIH en el mundo actual. Para mí, este proceso fue
+              profundamente catártico: una forma convertir la oscuridad en
+              esperanza y transformar el dolor en sentido.
             </p>
 
             <Separator className="my-8" />
